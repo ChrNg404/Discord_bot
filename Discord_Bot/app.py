@@ -7,7 +7,7 @@ from discord.ext.commands import bot
 # client = discord.Client()
 
 # async def send_message(message):
-#     channel = client.get_channel('724689655999496214')#add channel ID here
+#     channel = client.get_channel('x')#add channel ID here
 #     await channel.sent(message)
 
 # client.run('NzIzNjY0MjEzODM0NDY1MzAw.XvDMgg.Bg1OdMvlBRAtJOeCfbdCZntnTl4') #add Discord bot ID here
@@ -22,7 +22,7 @@ class botClient (discord.Client):
     
     async def get_connection(self):
         if self.voice_channel is None:
-            channel = self.get_channel(724689655999496214)#add channel ID here
+            channel = self.get_channel(x)#add channel ID here
             self.voice_channel = await channel.connect()
         return self.voice_channel
 
@@ -54,4 +54,4 @@ class botClient (discord.Client):
             await self.play_audio('search_room.mp3')
 
 client = botClient()
-client.run('NzIzNjY0MjEzODM0NDY1MzAw.XvDMgg.Bg1OdMvlBRAtJOeCfbdCZntnTl4')
+client.run('x') #add bot token here
